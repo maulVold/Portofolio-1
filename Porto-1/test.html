@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Progress</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #19232e;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        margin: 0;
+      }
+
+      .progress-container {
+        text-align: center;
+      }
+
+      .progress-container h1 {
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-weight: normal;
+        letter-spacing: 2px;
+      }
+
+      .circular-progress {
+        position: relative;
+        width: 140px;
+        height: 140px;
+        margin: 0 auto;
+      }
+
+      .circular-progress::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: conic-gradient(#00cec9 0% 75%, #2d3436 75% 100%);
+        transform: rotate(-90deg);
+      }
+
+      .circular-progress::after {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background-color: #19232e;
+      }
+
+      .circular-progress span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .details {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+      }
+
+      .details div {
+        width: 80px;
+        text-align: center;
+      }
+
+      .small-progress {
+        position: relative;
+        width: 70px;
+        height: 70px;
+        margin: 0 auto;
+      }
+
+      .small-progress::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: conic-gradient(#00cec9 0% 75%, #2d3436 75% 100%);
+        transform: rotate(-90deg);
+      }
+
+      .small-progress::after {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: #19232e;
+      }
+
+      .small-progress span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      p {
+        margin-top: 10px;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="progress-container">
+      <h1>Your Daily Progress</h1>
+      <div class="circular-progress">
+        <span>2758<br />kcal</span>
+      </div>
+      <div class="details">
+        <div>
+          <div class="small-progress">
+            <span>8563</span>
+          </div>
+          <p>steps</p>
+        </div>
+        <div>
+          <div class="small-progress">
+            <span>6,2</span>
+          </div>
+          <p>km</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
